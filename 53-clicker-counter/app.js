@@ -7,7 +7,7 @@ function setup() {
   background('lightgray')
 
   // Setup Instructions heading
-  const heading = createElement('h1', 'Click the bottons to change the score')
+  const heading = createElement('h1', 'Click the buttons to change the score')
   heading.style('font-family: roboto')
   heading.style('font-size: 50px')
   heading.style('text-align: center')
