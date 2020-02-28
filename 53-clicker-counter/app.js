@@ -53,16 +53,10 @@ function setup() {
 
 function increaseScore() {
   // 3 items missing
-
-
-
 }
 
 function decreaseScore() {
   // 3 items missing
-
-
-
 }
 
 function checkScore() {

@@ -1,3 +1,1 @@
-function setup(){
-  
-}
+function setup() {}

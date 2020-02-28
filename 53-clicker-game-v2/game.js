@@ -14,25 +14,19 @@ function setup() {
   // Setup Canvas
   createCanvas(windowWidth, windowHeight)
 
-
   // Setup Lives Display
   livesDisplay = createElement('h4', 'LIVES: ' + lives)
   livesDisplay.position(width / 20, height / 14)
 
-
   // Creates Difficulty Slider
   const difficultyLabel = createElement('h4', 'DIFFICULTY')
-
 }
 
 function draw() {
   // Adjust frameRate according to slider
 
-
   // Randomly Position Banana
   bananaImg.position(random(width), random(height))
-
-
 }
 
 function mousePressed() {
@@ -41,19 +35,10 @@ function mousePressed() {
   }
 }
 
-function increaseScore() {
+function increaseScore() {}
 
-}
+function decreaseLives() {}
 
-function decreaseLives() {
+function checkWin() {}
 
-}
-
-function checkWin() {
-
-
-}
-
-function checkLose() {
-
-}
+function checkLose() {}
