@@ -11,14 +11,22 @@ function setup() {
     'place',
     'I once lived with my pet in a place called ',
     '. Never have I been to a more disgusting place where tyrannical gnomes rule.',
+    false,
+    false,
+
+    // ADD CODE: Add 4 more additional topics
   )
 
   // Creates next button and styles it
-  let outputDisplayBtn = createButton('NEXT')
+  const outputDisplayBtn = createButton('NEXT')
   outputDisplayBtn.mousePressed(showOutputHandler)
+
+  // ADD CODE: call .parent() to attach the button to the inputDivUI
 
   function showOutputHandler() {
     outputDivUI.show()
+
+    // ADD CODE: Hide the inputDivUI
   }
 }
 
@@ -31,20 +39,33 @@ function addInputOutputElements() {
   outputDivUI.hide()
 }
 
-function addTopic(topic, intro, detail) {
+function addTopic(topic, intro, detail, uppercase, num) {
   createElement('p', `Name a ${topic.toUpperCase()}`)
     .id('input-label')
     .parent(inputDivUI)
 
-  let inputFieldUI = createInput(' ')
+  const inputFieldUI = createInput(' ')
     .id('input-field')
     .parent(inputDivUI)
 
   inputFieldUI.changed(updateOutputHandler)
 
-  let output = createP('').parent(outputDivUI)
-
   function updateOutputHandler() {
-    output.html(intro + inputFieldUI.value() + detail)
+    const output = createP('').parent(outputDivUI)
+    // ADD CODE: convert the user input to lowercase by default
+    let userInput = inputFieldUI.value()
+
+    // ADD CODE: convert to uppercase
+    if (uppercase === true) {
+      // ADD CODE: reassign userInput to be userInput.toUpperCase()
+      userInput = userInput
+    }
+
+    // ADD CODE: CONVERT TO NUM
+    // add if() statement that checks to see iff num === true.
+    // if true, convert userInput to a number and perform some math on it
+
+    // OUTPUT BACK TO USER IN THE OUTPUT FIELD
+    output.html(`${intro} ${userInput} ${detail}`)
   }
 }
