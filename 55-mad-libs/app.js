@@ -7,7 +7,11 @@ function setup() {
 
   addInputOutputElements()
 
-  addTopic("place", "I once lived with my pet in a place called ", ". Never have I been to a more disgusting place where tyrannical gnomes rule.")
+  addTopic(
+    'place',
+    'I once lived with my pet in a place called ',
+    '. Never have I been to a more disgusting place where tyrannical gnomes rule.',
+  )
 
   // Creates next button and styles it
   let outputDisplayBtn = createButton('NEXT')
@@ -15,7 +19,6 @@ function setup() {
 
   function showOutputHandler() {
     outputDivUI.show()
-
   }
 }
 
@@ -29,9 +32,13 @@ function addInputOutputElements() {
 }
 
 function addTopic(topic, intro, detail) {
-  createElement('p', 'Name a ' + topic.toUpperCase()).id('input-label').parent(inputDivUI)
+  createElement('p', `Name a ${topic.toUpperCase()}`)
+    .id('input-label')
+    .parent(inputDivUI)
 
-  let inputFieldUI = createInput(' ').id('input-field').parent(inputDivUI)
+  let inputFieldUI = createInput(' ')
+    .id('input-field')
+    .parent(inputDivUI)
 
   inputFieldUI.changed(updateOutputHandler)
 
