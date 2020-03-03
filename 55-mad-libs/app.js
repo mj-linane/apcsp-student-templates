@@ -13,9 +13,8 @@ function setup() {
     '. Never have I been to a more disgusting place where tyrannical gnomes rule.',
     false,
     false,
-
-    // ADD CODE: Add 4 more additional topics
   )
+    // ADD CODE: Add 4 more additional topics by calling addTopic()
 
   // Creates next button and styles it
   const outputDisplayBtn = createButton('NEXT')
@@ -25,8 +24,8 @@ function setup() {
 
   function showOutputHandler() {
     outputDivUI.show()
+ // ADD CODE: Hide the inputDivUI
 
-    // ADD CODE: Hide the inputDivUI
   }
 }
 
