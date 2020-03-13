@@ -18,8 +18,7 @@ function setup() {
   const button3 = select('#button3')
   const button4 = select('#button4')
 
-  const color = 'RGB(320, 155, 0)'
-
+  let color = 'RGB(320, 155, 0)'
 
   button1.style('background-color', color)
 }
